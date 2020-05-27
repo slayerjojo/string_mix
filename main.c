@@ -4,11 +4,10 @@
 
 int main(int argc, char *argv[])
 {
-    char *seed = "abcdefghijkmnlopqrstuvwxyz0123456789ABCDEFGHIJKMNLOPQRSTUVWXYZ";
     printf("raw:%s\r\n", argv[1]);
-    mix((uint8_t *)argv[1], strlen(argv[1]), seed);
+    mix((uint8_t *)argv[1], strlen(argv[1]));
     printf("mix:%s\r\n", argv[1]);
-    restore((uint8_t *)argv[1], strlen(argv[1]), seed);
+    restore((uint8_t *)argv[1], strlen(argv[1]));
     printf("restore:%s\r\n", argv[1]);
     return 0;
 }

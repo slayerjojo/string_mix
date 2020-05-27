@@ -3,7 +3,15 @@
 
 #include <stdint.h>
 
-int mix(uint8_t *src, uint32_t size, const char *charset);
-int restore(uint8_t *src, uint32_t size, const char *charset);
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+int mix(uint8_t *src, uint32_t size);
+int restore(uint8_t *src, uint32_t size);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
